@@ -38,13 +38,13 @@ public class NumberOfPaths {
             for(int i=1;i<vertex.length;++i){//0是起点 不需要遍历
                 int temp=step[from]+1;
                 if(matrix[from][i]==1){//邻接点 连通
-                    if(step[i]==-1||step[i]>temp){//i尚未到达或者发现有更短的路径（权值不一样才有可能）
+                    if(step[i]==-1||step[i]>temp){//i尚未到达或者发现有更短的路径（权值不一样才有可能,因为我们扩展示邻接矩阵相邻节点扩展，权值一样所以不会出现这种现象）
                         step[i]=temp;
                         pathNum[i]=pathNum[from];
                         deque.add(i);
                     }else if(step[i]==temp){//之前i点就到达过 但是最短路径一样
                         pathNum[i]+=pathNum[from];
-                    }
+                    }//要是到了这里 i顶点之前肯定到达过，但是这次扩展出来的路径要大于之前的所以不用考虑
                 }
             }
         }
