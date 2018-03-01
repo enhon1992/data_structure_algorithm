@@ -3,7 +3,7 @@ package enhon.number_of_paths;
 import java.util.ArrayDeque;
 import java.util.Arrays;
 
-public class NumberOfPaths {
+public class NumberOfPaths {//广度优先搜索
     public static void main(String[] args) {
         //先定义一个邻接矩阵用来表示有向无环图
         //邻接矩阵用两个数组保存数据。一个一维数组存储图中顶点信息，一个二维数组存储图中边或弧的信息
