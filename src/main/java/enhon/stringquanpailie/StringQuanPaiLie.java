@@ -6,7 +6,7 @@ public class StringQuanPaiLie {
 
 
     public static void main(String[] args) {
-        String[] str={"A","B","C"};
+        String[] str={"A","B","C","D"};
         printQuanPaiLie(str,0);
     }
 
