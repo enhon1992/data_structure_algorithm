@@ -6,7 +6,7 @@ public class StringMatch {
 
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getNextArray("abaabcaba")));
+        System.out.println(Arrays.toString(getNextArray("ABABABABA")));
     }
 
 
