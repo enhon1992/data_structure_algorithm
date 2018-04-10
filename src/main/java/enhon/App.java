@@ -42,7 +42,14 @@ public class App
 //        System.out.println("总的ip数"+list.size());
 //        br.close();
 //        writer.close();
-        System.out.println(Integer.toBinaryString(10));
+        ArrayList<Person> tree= new ArrayList<Person>();
+        tree.add( new X());
+        tree.add( new X());
+        tree.add( new X());
+        Object[] arr= tree.toArray();
+        //Person[] p=(Person[])arr;
+        //List<String>[] lsa = new List<String>[10];      //1
+
     }
 
 
