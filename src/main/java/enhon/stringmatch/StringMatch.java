@@ -7,7 +7,7 @@ public class StringMatch {
 
     public static void main(String[] args) {
         System.out.println(bruteForce("hjhrehreidf","df"));
-        System.out.println(kmp("hjhrehreidf","df"));
+        System.out.println(kmp2("hjhrehreidf","df"));
     }
 
 
@@ -67,7 +67,7 @@ public class StringMatch {
 
     /**
      * 模式字符串匹配的BruteForce算法
-     * 时间负载度是TEXT.LENGTH*PATTERN.LENGTH
+     * 时间复杂度是TEXT.LENGTH*PATTERN.LENGTH
      * @return
      */
     public static int bruteForce(String text,String pattern)
@@ -92,8 +92,8 @@ public class StringMatch {
 
 
     /**
-     * 模式字符串匹配的BruteForce算法
-     * 时间负载度是TEXT.LENGTH*PATTERN.LENGTH
+     *
+     * 时间复杂度是TEXT.LENGTH+PATTERN.LENGTH
      * @return
      */
     public static int kmp(String text,String pattern)
@@ -117,5 +117,32 @@ public class StringMatch {
             }
         }
         return ans;
+    }
+
+
+    /**
+     *
+     * 时间复杂度是TEXT.LENGTH+PATTERN.LENGTH
+     * @return
+     */
+    public static int kmp2(String text,String pattern)
+    {
+        int[] next=getNextArray2(pattern);
+        int i=0;
+        int j=0;
+        int size=pattern.length();
+        int last=text.length()-size;
+        while ((i<=last)&&(j<size)){
+            if(text.charAt(i+j)==pattern.charAt(j)){
+                j++;
+            }else{
+                i=i+j-next[j];
+                j=next[j]+1;
+            }
+        }
+        if(j>=size){
+            return i;
+        }
+        return -1;
     }
 }
