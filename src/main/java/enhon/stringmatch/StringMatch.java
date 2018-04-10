@@ -6,8 +6,8 @@ public class StringMatch {
 
 
     public static void main(String[] args) {
-        System.out.println(bruteForce("hjhrehreidf","df"));
-        System.out.println(kmp2("hjhrehreidf","df"));
+        System.out.println(bruteForce("hjhrehreidffdd","adff"));
+        System.out.println(kmp2("hjhrehreidffdd","adff"));
     }
 
 
@@ -123,6 +123,7 @@ public class StringMatch {
     /**
      *
      * 时间复杂度是TEXT.LENGTH+PATTERN.LENGTH
+     * 这个算法比较好理解
      * @return
      */
     public static int kmp2(String text,String pattern)
