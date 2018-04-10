@@ -4,7 +4,8 @@ public class Hanoi {
 
 
     public static void main(String[] args) {
-        System.out.println(calc("BBAAAAAAAAAAAAAAA",'A','C','B'));
+        System.out.println(calc("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",'A','C','B'));
+        System.out.println((1<<3)-1);
     }
 
     public static  void move(int n,char from,char to,char aux){
@@ -43,7 +44,7 @@ public class Hanoi {
             if(n==-1){
                 return -1;
             }
-            return 1<< (size-1)+n;
+            return (1<< (size-1))+n;
         }
         return calc(str.substring(0,size-1),from,aux,to);//str.charAt(size-1)==from
     }
