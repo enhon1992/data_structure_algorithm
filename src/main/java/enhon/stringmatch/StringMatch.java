@@ -37,7 +37,6 @@ public class StringMatch {
                     temp[i]=tempStr.substring(0,tempStr.length()-tempIndex).length();
                 }
             }
-
         }
         return temp;
     }
