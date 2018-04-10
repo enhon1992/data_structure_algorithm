@@ -67,7 +67,7 @@ public class StringMatch {
 
     /**
      * 模式字符串匹配的BruteForce算法
-     * 时间复杂度是TEXT.LENGTH*PATTERN.LENGTH
+     * 时间复杂度是TEXT.LENGTH*PATTERN.LENGTH  空间负载度是O(1)
      * @return
      */
     public static int bruteForce(String text,String pattern)
@@ -93,7 +93,7 @@ public class StringMatch {
 
     /**
      *
-     * 时间复杂度是TEXT.LENGTH+PATTERN.LENGTH
+     * 时间复杂度是TEXT.LENGTH
      * @return
      */
     public static int kmp(String text,String pattern)
@@ -122,7 +122,7 @@ public class StringMatch {
 
     /**
      *
-     * 时间复杂度是TEXT.LENGTH+PATTERN.LENGTH
+     * 时间复杂度是TEXT.LENGTH 空间负载度是O(PATTERN.LENGTH)
      * 这个算法比较好理解
      * @return
      */
