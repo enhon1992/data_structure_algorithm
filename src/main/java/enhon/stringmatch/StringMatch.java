@@ -94,6 +94,7 @@ public class StringMatch {
     /**
      *
      * 时间复杂度是TEXT.LENGTH
+     * 所以，如果文本串的长度为n，模式串的长度为m，那么匹配过程的时间复杂度为O(n)，算上计算next的O(m)时间，KMP的整体时间复杂度为O(m + n)。
      * @return
      */
     public static int kmp(String text,String pattern)
@@ -123,6 +124,7 @@ public class StringMatch {
     /**
      *
      * 时间复杂度是TEXT.LENGTH 空间负载度是O(PATTERN.LENGTH)
+     * 所以，如果文本串的长度为n，模式串的长度为m，那么匹配过程的时间复杂度为O(n)，算上计算next的O(m)时间，KMP的整体时间复杂度为O(m + n)。
      * 这个算法比较好理解
      * @return
      */
