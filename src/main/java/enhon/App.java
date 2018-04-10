@@ -42,7 +42,7 @@ public class App
 //        System.out.println("总的ip数"+list.size());
 //        br.close();
 //        writer.close();
-        System.out.println(23190000 * 15/100.0);
+        System.out.println(Integer.toBinaryString(10));
     }
 
 
