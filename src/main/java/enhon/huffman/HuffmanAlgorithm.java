@@ -1,5 +1,7 @@
 package enhon.huffman;
 
+import com.alibaba.fastjson.JSON;
+
 import java.io.*;
 import java.util.*;
 
@@ -18,6 +20,8 @@ public class HuffmanAlgorithm {
         System.out.println("解码结果：");
         System.out.println(instance.decode(res));
         System.out.println("元数据的长度："+source.getBytes("utf-8").length);
+        Map<Character, String> map = res.getLetterCode();
+        System.out.println(JSON.toJSONString(map).getBytes("utf-8").length);
     }
 
         public String printByteBinaryString(byte b){
