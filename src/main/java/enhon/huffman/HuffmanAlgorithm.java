@@ -202,6 +202,7 @@ public class HuffmanAlgorithm {
         if(letterList.size()<1)
             throw new RuntimeException();
         init(letterList);
+        System.out.println(letterList.get(letterList.size()-1).getData().getFrequency()+"=============");
         if(letterList.size()==1)
             return letterList.get(0);
         while(true){
