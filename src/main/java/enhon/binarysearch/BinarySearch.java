@@ -7,7 +7,6 @@ package enhon.binarysearch;
  * @createTime 2022年04月13日 20:25:00
  */
 public class BinarySearch {
-
     private static int binarySearch0(long[] arr, int fromIndex, int toIndex,
                                      long key) {
         int low = fromIndex;
